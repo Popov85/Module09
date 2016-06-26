@@ -1,24 +1,15 @@
 package com.goit.g2popov.module09;
 
 /**
- * Created by Андрей on 25.06.2016.
- */
+ * Class {@code Runner} Module 09
+ * Task. Encrypt/decrypt objects from module03 by means of Caesar algorithm
+ **/
 public class Runner {
         public static void main(String[] args) {
-
-                String sentence = "The quick brown fox jumps over the lazy dog!";
-                try {
-                        CipherEngine engine = new CipherEngine(sentence,8);
-                        System.out.println("Initial sentence is:\n" + sentence);
-                        engine.cipher(true);
-                        System.out.println("Coded sentence is:\n"+ engine.toString());
-                        engine.cipher(false);
-                        System.out.println("DeCoded sentence is:\n"+ engine.toString());
-                } catch (IllegalArgumentException e) {
-                        System.out.println("Failed to create an object. Shift is out of the range!");
-                } catch (Exception e) {
-                        e.printStackTrace();
-                }
-
+                Client client = new Client("Mr Jack","Simpson","Canada, Toronto, Portland ave., 15/96","jacky.simpson90@gmail.com");
+                System.out.println("Encrypted personal info: ");
+                System.out.println(client.toString());
+                System.out.println("Decrypted personal info: ");
+                System.out.println(client.decrypt());
         }
 }

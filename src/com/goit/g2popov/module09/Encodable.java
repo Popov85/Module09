@@ -12,5 +12,5 @@ public interface Encodable {
         int MAX_INDEX = ALPHABET_LOWER.length;
         int MIN_SHIFT = 3;
 
-        void cipher(boolean isToCipher);
+        String cipher(boolean isToCipher);
 }

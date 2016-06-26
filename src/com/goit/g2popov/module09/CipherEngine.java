@@ -35,7 +35,7 @@ public class CipherEngine implements Encodable {
          * Realizes the Caesar algorithm for coding and decoding
          * @param isToCipher - whether you will cipher or decipher, true for coding, false for decoding
          */
-        public void cipher(boolean isToCipher) {
+        public String cipher(boolean isToCipher) {
                 StringBuilder output = new StringBuilder();
                 int size = statement.length();
                 String alphabet;
@@ -53,7 +53,7 @@ public class CipherEngine implements Encodable {
                                 output.append(getChar(actualPosition, alphabet, c));
                         }
                 }
-                this.statement = output.toString();
+                return output.toString();
         }
 
         private int getActualPosition(int position, boolean decipher) {
