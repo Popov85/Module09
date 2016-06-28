@@ -7,7 +7,7 @@ package com.goit.g2popov.module09;
 
 public class Client {
         private static final int SHIFT = 3;
-        private static CipherEngine encryptionEngine = new CipherEngine("",SHIFT);
+        private static final CipherEngine encryptionEngine = new CipherEngine("",SHIFT);
 
         private String name;
         private String surname;
